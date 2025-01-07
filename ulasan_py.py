@@ -44,11 +44,4 @@ st.write(filtered_data[['userName', 'content', 'score', 'at']])
 # Input teks ulasan pengguna yang sudah dihilangkan
 # user_input = st.sidebar.text_area("Tulis ulasan Anda:") # Bagian ini dihapus
 
-# Button untuk mendapatkan rekomendasi berdasarkan komentar pengguna
-if st.sidebar.button("Dapatkan Rekomendasi Berdasarkan Versi Aplikasi"):
-    if selected_version:  # Karena tidak ada input teks, kita dapat memberikan rekomendasi berdasarkan versi aplikasi
-        recommendations = get_recommendations(" ")  # Input kosong untuk mencari rekomendasi berdasarkan dataset yang ada
-        st.write("Rekomendasi Layanan Berdasarkan Ulasan yang Ada:")
-        st.write(recommendations[['userName', 'content', 'score', 'at']])
-    else:
-        st.error("Tolong pilih versi aplikasi terlebih dahulu.")
+
